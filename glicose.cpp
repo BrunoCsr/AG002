@@ -7,7 +7,7 @@ void readGlic();
 int main()
 {
 
-	cout << "Qual seu nivel de glicose?" << endl;
+	cout << "Qual seu nivel de glicose? (mg/dl)" << endl;
 	readGlic();
 
 	cout << "Ha quantos meses voce fez seu ultimo check up? " << endl;
@@ -23,10 +23,10 @@ void readGlic()
 	float glicose;
 	cin >> glicose;
 
-	if(glicose > 0 && glicose <= 100)
+	if(glicose > 0 && glicose < 70)
 		cout << "Hipoglicemia" << endl;
 
-	else if(glicose > 100 && glicose <= 200)
+	else if(glicose >= 70 && glicose <= 100)
 		cout << "Glicemia normalizada" << endl;
 
 	else
